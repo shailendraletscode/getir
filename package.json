@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start-dev": "nodemon --exec babel-node ./server/start.js",
-    "start": "node ./dist-server/start.js",
+    "start": "npm run clean && npm run build && pm2-runtime start ecosystem.config.js --env production",
     "transpile": "babel ./server --out-dir dist-server",
     "clean": "rimraf dist-server",
     "build": "npm run clean && npm run transpile",
@@ -36,5 +36,8 @@
     "jest": "^27.3.1",
     "supertest": "^6.1.6",
     "nodemon": "^2.0.14"
+  },
+  "engines": {
+    "node": "14.0.0"
   }
 }
