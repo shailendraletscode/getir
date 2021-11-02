@@ -1,0 +1,40 @@
+{
+  "name": "getir",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start-dev": "nodemon --exec babel-node ./server/start.js",
+    "start": "node ./dist-server/start.js",
+    "transpile": "babel ./server --out-dir dist-server",
+    "clean": "rimraf dist-server",
+    "build": "npm run clean && npm run transpile",
+    "test": "jest"
+  },
+  "jest": {
+    "setupFiles": [
+      "dotenv/config"
+    ],
+    "testTimeout": 300000,
+    "testEnvironment": "node",
+    "testRegex": "./server/.*.test.js$"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "express-validator": "^6.13.0",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.0.12",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6",
+    "nodemon": "^2.0.14"
+  }
+}
