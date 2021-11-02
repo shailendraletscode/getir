@@ -11,8 +11,8 @@ export default {
     return [
       body('startDate').trim().isDate({format: 'YYYY-MM-DD', strictMode: true}),
       body('endDate').trim().isDate({format: 'YYYY-MM-DD', strictMode: true}),
-      body('minCount').isInt(),
-      body('maxCount').isInt(),
+      body('minCount').trim().isInt({min: 0}),
+      body('maxCount').trim().isInt({min: 0, gte: body('minCount')}),
     ];
   },
   // Middleware to send error response if request body is not proper

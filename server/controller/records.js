@@ -3,10 +3,13 @@ export default {
   getRecords: async (req, res) => {
     try {
       // Extract parameters from request body
-      const {startDate, endDate, minCount, maxCount} = req.body;
+      let {startDate, endDate, minCount, maxCount} = req.body;
+      minCount = parseInt(minCount);
+      maxCount = parseInt(maxCount);
       const data = await Records.aggregate([
         {
           $project: {
+            _id: 0,
             key: 1,
             createdAt: 1,
             totalCount: {
