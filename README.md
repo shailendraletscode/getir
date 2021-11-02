@@ -45,31 +45,26 @@ We are using babel to transpile es6 code.
             "message": "Success",
             "records": [
                 {
-                    "_id": "",
                     "key": "bZTEhibw",
                     "createdAt": "2015-06-30T22:22:41.979Z",
                     "totalCount": 2260
                 },
                 {
-                    "_id": "",
                     "key": "HGnNNXwF",
                     "createdAt": "2015-06-18T22:11:18.893Z",
                     "totalCount": 2320
                 },
                 {
-                    "_id": "",
                     "key": "qtiLtFeV",
                     "createdAt": "2015-06-13T18:55:26.258Z",
                     "totalCount": 2169
                 },
                 {
-                    "_id": "",
                     "key": "aIXHMLLu",
                     "createdAt": "2015-06-09T13:34:16.726Z",
                     "totalCount": 2472
                 },
                 {
-                    "_id": "",
                     "key": "sNrphIkF",
                     "createdAt": "2015-06-06T02:57:12.159Z",
                     "totalCount": 2286
